@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
 import { GoodsComponent } from './goods/goods.component';
 import { CartComponent } from './cart/cart.component';
 import { NotfoundComponent } from './notfound/notfound.component';
@@ -11,6 +10,7 @@ import { EditComponent } from './edit/edit.component';
 import { SumComponent } from './sum/sum.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './guard/auth.guard';
+import { SignupComponent } from './signup/signup.component';
 
 
 
