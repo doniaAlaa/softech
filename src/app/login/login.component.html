@@ -1,0 +1,231 @@
+
+
+<div class="container " >
+  <img src="http://localhost/store/wp-content/uploads/2019/12/الأماكن-السياحية-في-فرانكفورت-1920x500-1.jpg" alt="Snow" style="width:auto; height: 100%; opacity: 0.2;"> 
+  <!-- 
+    <form [formGroup]="addForm" (submit)="login()">
+        <div class="form-group">
+          <label for="exampleInputUser">email </label>
+          <input formControlName="user" name="user" class="form-control" id="exampleInputUser" placeholder="email">
+          </div>
+       
+        <div class="form-group">
+          <label for="exampleInputPass">password</label>
+          <input formControlName="password" name="Password" class="form-control" id="exampleInputPass" placeholder="Password">
+     <div *ngIf="email.touched && email.errors?.required" class="alert alert-danger">Email is required</div>
+        <div class="alert alert-danger" *ngIf="email.touched && email.errors?.email">Your input dosen't match email format</div>
+
+        </div>
+         
+        <div class="form-group">
+        <label for="exampleInputName">device_type</label>
+        <i class="fa fa-user" aria-hidden="true" style="color: blue;"></i>
+         
+        <input formControlName="device_type" name="device_type" class="form-control" id="exampleInputName" placeholder="device_type">
+        </div>
+        <button type="submit" class="btn btn-primary">login</button>
+        <div class="error">{{ error }}</div>
+      </form>
+    
+
+
+     -->
+      
+     
+     <!--<form  action="index.html" class="login-form" style="margin-top: 50px;">
+      <form [formGroup]="addForm" (submit)="login()">
+      <h1>Login ...</h1>
+      <div class="form-group">
+       <div class="txtb">
+        <i class="fa fa-user" aria-hidden="true" style="color: white;"></i>
+        <input  formControlName="user" name="user" class="form-control"  type="text">
+        <span data-placeholder="Username" style="color: #ffffff;" ></span>
+       </div>
+      </div>
+      -->
+      
+      <!--
+       <form [formGroup]="addForm" (submit)="login()" class="login-form" style="margin-top: 70px;">
+          
+          <img src="http://localhost/store/wp-content/uploads/2020/06/image001.png" style="width:70px ;" class="center">
+         <div class="form-group">
+          <div class="txtb">
+          <i class="fa fa-user" aria-hidden="true" style="color:#fff;"></i>
+          <input  formControlName="email" name="email" class="form-control" id="exampleInputUser"  >
+          <span data-placeholder="email" style="color: #ffffff;" ></span>
+          <div *ngIf="" class="alert alert-danger">Password is required</div>
+           
+          </div>
+      
+        
+         </div>
+
+
+
+          <div class="form-group">
+           <div class="txtb">
+           <i class="fa fa-lock" aria-hidden="true"  style="color: #fff;"></i>
+           <input formControlName="password" name="Password" class="form-control" id="exampleInputPass">
+           <span data-placeholder="Username" style="color: #ffffff;" ></span>
+          
+           </div>
+      
+
+
+
+
+
+
+          </div>
+
+        -->
+    
+               <!-- <input type="submit" class="logbtn" value="Login">-->
+             <!-- <button type="submit" class="btn btn-primary  logbtn" >login</button>
+            
+
+
+            
+
+          </form>
+   
+   
+        -->
+
+        <!--
+    
+  </div>  
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+<div class="container ">
+  
+<form #f="ngForm" (submit)="login()" class="login-form" style="height: auto; margin-top: 90px;" >
+  <img src="http://localhost/store/wp-content/uploads/2020/06/image001.png" style="width:70px ;" class="center">
+         
+  <div >
+   
+    <div class="txtb">
+      <i class="fa fa-user" aria-hidden="true" style="color:#fff;"></i>
+      <input   ngModel name="email" #email="ngModel" type="email"  class="form-control" placeholder="email" required email/>
+      <div *ngIf="email.touched && email.errors?.required" class="alert alert-danger">Email is required</div>
+      <div class="alert alert-danger" *ngIf="email.touched && email.errors?.email">Your input dosen't match email format</div>
+
+    </div>
+  </div>
+<br>
+  <div >
+    <div class="txtb">
+      <i class="fa fa-lock" aria-hidden="true"  style="color: #fff;"></i>
+      <input ngModel name="password" #password="ngModel" class="form-control" placeholder="Password" required password/>
+      <div *ngIf="password.touched && password.errors?.required" class="alert alert-danger">password is required</div>
+    </div>
+  </div>
+  <br>
+
+  <div >
+      <button type="Submit" class="btn btn-primary  logbtn" >Create Account</button>
+     
+  </div>
+</form>
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form [formGroup]="addForm" (submit)="login()" class="login-form" style="margin-top: 60px; height: auto;" #myform="ngForm">
+          
+  <img src="http://localhost/store/wp-content/uploads/2020/06/image001.png" style="width:70px ;" class="center">
+ <div class="form-group">
+  <div class="txtb">
+  <i class="fa fa-user" aria-hidden="true" style="color:#fff;"></i>
+  <input  formControlName="email" name="email" class="form-control" id="email" required >
+ 
+  <span data-placeholder="email" style="color: #ffffff;" ></span>
+ <div *ngIf="addForm.get('email').hasError('required') && myform.submitted" class='alert alert-danger'>Email is required</div>
+  <div *ngIf="addForm.get('email').hasError('email') && myform.submitted" class='alert alert-danger'>Please enter valid email.</div>
+
+ 
+   
+  </div>
+
+
+ </div>
+
+
+
+  <div class="form-group">
+   <div class="txtb">
+   <i class="fa fa-lock" aria-hidden="true"  style="color: #fff;"></i>
+   <input formControlName="password" name="Password" class="form-control" id="exampleInputPass">
+  
+   <span data-placeholder="password" style="color: #ffffff;" ></span>
+   <div *ngIf="addForm.get('password').hasError('required') && myform.submitted" class='alert alert-danger'>Email is required</div>
+   <div *ngIf="addForm.get('password').hasError('password') && myform.submitted" class='alert alert-danger'>Please enter valid email.</div>
+ 
+   </div>
+
+
+
+
+
+
+
+  </div>
+  <div class="center">
+ <button type="submit" class="btn btn-primary  logbtn" style="border-radius: 30%; ">login</button>
+    
+  </div>
+
+    
+
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

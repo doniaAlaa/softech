@@ -1,0 +1,78 @@
+
+<div class="body">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm" >
+        <img src="http://localhost/store/wp-content/uploads/2020/06/person-to-person-business.jpg">
+      </div>
+      <div class="col-sm">
+        <img src="http://localhost/store/wp-content/uploads/2020/06/ACruz.jpg" style="width: 300px; height: 300px;">
+      </div>
+      <div class="col-sm">
+        <img src="http://localhost/store/wp-content/uploads/2020/06/stern-alexander-x.jpg" style="width: 300px; height: 300px;">
+      </div>
+    </div>
+    <br><br>
+
+
+    
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addForm">
+  add employee
+</button>
+
+
+
+
+<br><br><br>
+   
+    <div class="row" *ngIf="showData" >
+        <div class="col-md-4 " *ngFor="let item of items" >
+          <div class="card" style="width: 18rem;" >
+           
+            <div class="card-body">
+              <h1 class="card-title center"  >employee <span>{{item.id}} </span></h1>
+              <h5 class="card-title">Name : {{item.name}}</h5>
+              <p class="card-text">Job: {{item.job}}</p>
+              <button class="btn btn-danger" type="submit" (click)="deleteItem(item.id)">delete</button>
+              <span >
+              <button href="#" class="btn btn-primary" [routerLink]="['./../edit',item.id]" style="float: right;">edit</button>
+            </span>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div *ngIf="!showData" class="row">
+        <h1>Please wait .. loading data</h1>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form [formGroup]="addForm" (submit)="onSubmit()">
+      <div class="modal-header">
+        
+        <label for="exampleInputName">name</label>
+          <input  name="name"  formControlName="name" class="form-control" placeholder="name">
+        <button type="button"  class="close" data-dismiss="modal" aria-label="Close">
+        
+        </button>
+
+        <label for="exampleInputName">job</label>
+        <input  formControlName="job" class="form-control" name="name"  placeholder="job">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+     
+      <div class="modal-footer">
+        <button  type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button (click)="onSubmit()"  type="submit" type="button" class="btn btn-primary">add</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>

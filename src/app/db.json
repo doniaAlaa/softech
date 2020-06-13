@@ -1,0 +1,10 @@
+{
+    "users": [
+      { "id": 1, "name": "apple", "price": 5 ,"photoUrl": "http://localhost/store/wp-content/uploads/2020/04/download-11.jpg"},
+      { "id": 2, "name": "banana", "price": 10 ,"photoUrl": "http://localhost/store/wp-content/uploads/2020/04/61fZYAYGaL._SL1500_.jpg"},
+      { "id": 3, "name": "mango", "price": 15 ,"photoUrl": "http://localhost/store/wp-content/uploads/2020/04/product-packshot-mango.jpg"}
+
+    ]
+   
+   
+  }

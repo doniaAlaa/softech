@@ -1,0 +1,36 @@
+
+<div class="container ">
+  <h2 class="text-center">sign up</h2>
+  <form [formGroup]="addForm" (submit)="signUp()">
+      <div class="form-group">
+        <label for="exampleInputName">Username</label>
+        <input formControlName="name" name="name" class="form-control" id="exampleInputName" placeholder="name">
+        </div>
+      <div class="form-group">
+          <label for="exampleInputPrice">Email</label>
+          <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+
+          <i class="fa fa-user" aria-hidden="true" style="color: blue;"></i>
+          <input  formControlName="email" name="email" class="form-control" id="exampleInputPrice" placeholder="email">
+           </div>
+      <div class="form-group">
+        <label for="exampleInputPass">Password</label>
+        <input formControlName="password" name="password" class="form-control" id="exampleInputPass" placeholder="password">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputMobile">Mobile Number</label>
+        <input formControlName="mobile_number" name="mobile_number" class="form-control" id="exampleInputMobile" type="password" placeholder="Mobile Number">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputDev">Device Type</label>
+        <input formControlName="device_type" name="device_type" class="form-control" id="exampleInputPass"  placeholder="Device Type">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputCon">Mobile Country Id</label>
+        <input formControlName="mobile_country_id" name="mobile_country_id" class="form-control" id="exampleInputCon" type="password" placeholder="Mobile Country Id">
+      </div>
+      <button type="submit" class="btn btn-primary">Create Account</button>
+    </form>
+</div> 

@@ -1,0 +1,35 @@
+
+
+<div><img src="http://localhost/store/wp-content/uploads/2020/04/tu.jpg"></div>
+<div class="container">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">price</th>
+        <th scope="col">describsion</th>
+        <th scope="col">action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of items" >
+    
+      <tr>
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+        <td>lknhikhnik</td>
+        <td >  
+       <a href="#" class="btn btn-default text-primary" >delete</a>
+          <a href="#" class="btn btn-default text-primary" [routerLink]="['./../edit',item.id]">edit</a>
+          <a href="#" class="btn btn-default text-primary" [routerLink]="['../add']">add</a>
+        
+        
+     </td>
+      </tr>
+    </tbody>
+  </table>
+ 
+ 
+</div>
+
