@@ -58,7 +58,7 @@ export class EditComponent implements OnInit {
   buildEditForm(){
     this.editForm = this.fb.group({
       name : [null,Validators.required],
-      price :  [null,Validators.required],
+      job :  [null,Validators.required],
       
       
     });

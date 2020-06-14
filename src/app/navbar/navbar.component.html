@@ -8,15 +8,15 @@
   
     <div class="collapse navbar-collapse" [class.show]="isOpen"  id="navbarSupportedContent" >
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item ">
+       <li class="nav-item ">
           <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" style="font-size: 20px;">Home <span class="sr-only">(current)</span></a>
-        </li>
+        </li> 
         <li class="nav-item">
           <a class="nav-link"routerLink="/cart" routerLinkActive="active" style="font-size: 20px;">cart</a>
         </li>
-      <li class="nav-item">
+    <!-- <li class="nav-item">
             <a class="nav-link" routerLink="/admin" routerLinkActive="active" style="font-size: 20px;">dashboard</a>
-          </li>   
+          </li>   -->
     <li class="nav-item" *ngIf="collectionSevice.isLogged == false">
             <a class="nav-link" routerLink="/login" routerLinkActive="active" style="font-size: 20px;" >login</a>
           </li>  
@@ -24,15 +24,15 @@
             <a class="nav-link" routerLink="/register" routerLinkActive="active" style="font-size: 20px;">register</a>
             </li> -->
         
-          <li class="nav-item">
+         <!-- <li class="nav-item">
             <a class="nav-link" routerLink="/signup" routerLinkActive="active" style="font-size: 20px;" >signup</a>
-          </li>
+          </li>-->
           <li class="nav-item" *ngIf="collectionSevice.isLogged == true">
           <a (click)="logout()" class="nav-link" style="cursor:pointer" >logout</a>
           </li>
-          <li class="nav-item">
+       <!--   <li class="nav-item">
             <a class="nav-link" routerLink="/add" routerLinkActive="active" style="font-size: 20px;">add</a>
-          </li>
+          </li>  -->
         
         
       </ul>
